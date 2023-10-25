@@ -33,7 +33,7 @@ const useStyles = makeStyles({
                 <Toolbar>
                     <img src={crossedSwords} alt="Crossed Swords Icon" className={classes.icon} />
                     <Typography variant="h6" className={classes.title}>
-                        TRUEGAMER
+                        8GAMER
                     </Typography>
                 </Toolbar>
             </AppBar>
