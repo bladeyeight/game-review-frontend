@@ -3,7 +3,8 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { makeStyles } from '@mui/styles';
-import crossedSwords from '../assets/crossedSwords.jpg';  // Adjust the path accordingly
+import crossedSwords from '../assets/crossedSwords.jpg';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
     appBar: {
@@ -12,9 +13,12 @@ const useStyles = makeStyles({
             borderBottom: '2px solid black',
         },
     },
+    customFont: {
+        fontFamily: '"Press Start 2P", cursive',
+        color: 'black',
+    },
     title: {
       '&.MuiTypography-root': {
-        fontFamily: '"Press Start 2P", cursive',
         marginLeft: '10px',
         color: 'black',
       },
@@ -31,9 +35,11 @@ const useStyles = makeStyles({
         return (
             <AppBar position="static" className={classes.appBar}>
                 <Toolbar>
+                <Link to="/">
                     <img src={crossedSwords} alt="Crossed Swords Icon" className={classes.icon} />
+                </Link>
                     <Typography variant="h6" className={classes.title}>
-                        8GAMER
+                    <span className={classes.customFont}>GAMEREIGHT</span>
                     </Typography>
                 </Toolbar>
             </AppBar>
